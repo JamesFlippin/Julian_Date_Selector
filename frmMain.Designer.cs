@@ -56,6 +56,8 @@ namespace Julian_Date_Selector
             this.lblSelectedFormat = new System.Windows.Forms.Label();
             this.grpLookup = new System.Windows.Forms.GroupBox();
             this.lblSearchDate = new System.Windows.Forms.Label();
+            this.darkModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.grpLookup.SuspendLayout();
             this.SuspendLayout();
@@ -181,7 +183,9 @@ namespace Julian_Date_Selector
             this.menuStrip1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuSetFormat,
-            this.mnuHelp});
+            this.darkModeToolStripMenuItem,
+            this.mnuHelp,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(704, 27);
@@ -251,19 +255,19 @@ namespace Julian_Date_Selector
             // mnuHelpWebsite
             // 
             this.mnuHelpWebsite.Name = "mnuHelpWebsite";
-            this.mnuHelpWebsite.Size = new System.Drawing.Size(178, 24);
+            this.mnuHelpWebsite.Size = new System.Drawing.Size(180, 24);
             this.mnuHelpWebsite.Text = "Help &Website";
             this.mnuHelpWebsite.Click += new System.EventHandler(this.mnuHelpWebsite_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(175, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // mnuAbout
             // 
             this.mnuAbout.Name = "mnuAbout";
-            this.mnuAbout.Size = new System.Drawing.Size(178, 24);
+            this.mnuAbout.Size = new System.Drawing.Size(180, 24);
             this.mnuAbout.Text = "About";
             this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
             // 
@@ -291,6 +295,7 @@ namespace Julian_Date_Selector
             this.grpLookup.TabIndex = 2;
             this.grpLookup.TabStop = false;
             this.grpLookup.Text = "Date Search:";
+            this.grpLookup.Enter += new System.EventHandler(this.grpLookup_Enter);
             // 
             // lblSearchDate
             // 
@@ -302,6 +307,19 @@ namespace Julian_Date_Selector
             this.lblSearchDate.Size = new System.Drawing.Size(88, 19);
             this.lblSearchDate.TabIndex = 4;
             this.lblSearchDate.Text = "Find &Date:";
+            // 
+            // darkModeToolStripMenuItem
+            // 
+            this.darkModeToolStripMenuItem.Name = "darkModeToolStripMenuItem";
+            this.darkModeToolStripMenuItem.Size = new System.Drawing.Size(104, 23);
+            this.darkModeToolStripMenuItem.Text = "Dark-&Mode";
+            this.darkModeToolStripMenuItem.Click += new System.EventHandler(this.darkModeToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(50, 23);
+            this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // frmMain
             // 
@@ -365,6 +383,8 @@ namespace Julian_Date_Selector
         private System.Windows.Forms.ToolStripMenuItem mnuHelpWebsite;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem mnuAbout;
-    }
+        private System.Windows.Forms.ToolStripMenuItem darkModeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        }
 }
 
