@@ -99,7 +99,9 @@
     <None Include="Calendar.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="JulianDate.html" />
+    <Content Include="JulianDate.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

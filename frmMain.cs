@@ -406,7 +406,7 @@ namespace Julian_Date_Selector
             {
             try
                 {
-                Process.Start("https://www.flippintechnologies.com/calendardatetojuliandateselector");
+                Process.Start("https://jamesflippin.github.io/Julian_Date_Selector/");
                 }
             catch (Exception)
                 {
@@ -457,7 +457,19 @@ namespace Julian_Date_Selector
                 }
             catch (Exception)
                 {
-                MessageBox.Show("An unanticipated error has occured.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An unanticipated error has occurred.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        private void mnuUserGuide_Click(object sender, EventArgs e)
+            {
+            try
+                {
+                Process.Start(Application.StartupPath + @"\JulianDate.html");
+                }
+            catch (Exception ex)
+                {
+                MessageBox.Show("An unanticipated error has occurred:\n\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
