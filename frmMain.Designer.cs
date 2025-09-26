@@ -113,6 +113,7 @@
             this.btnFind.Text = "&Find";
             this.ttTips.SetToolTip(this.btnFind, "Find a Calendar Date");
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // mtbDate
             // 
@@ -136,6 +137,7 @@
             this.dtpDate.Size = new System.Drawing.Size(376, 26);
             this.dtpDate.TabIndex = 7;
             this.ttTips.SetToolTip(this.dtpDate, "Pick a Calendar date (drop down or arrow  up/down)");
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged_1);
             // 
             // cbxNotifyOnCopy
             // 
@@ -294,6 +296,7 @@
             this.mnuHelpWebsite.Name = "mnuHelpWebsite";
             this.mnuHelpWebsite.Size = new System.Drawing.Size(180, 24);
             this.mnuHelpWebsite.Text = "Help &Website";
+            this.mnuHelpWebsite.Click += new System.EventHandler(this.mnuHelpWebsite_Click);
             // 
             // toolStripSeparator1
             // 
@@ -363,7 +366,8 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(16, 17);
+            this.toolStripStatusLabel1.Text = "   ";
             // 
             // grpConvertJulianToCalendarDate
             // 

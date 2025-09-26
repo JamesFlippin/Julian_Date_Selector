@@ -8,6 +8,7 @@
 // Installation/Deployment method: Available in the Microsoft App Store
 
 using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
@@ -97,6 +98,7 @@ namespace Julian_Date_Selector
                 }
             catch (Exception ex)
                 {
+                // Provide some user generic feedback if there is a date error
                 MessageBox.Show("Incorrect date entered. Please try again.\n\n\n" + ex.Message, "Date Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lblJulianDateOutput.Text = string.Empty;
                 }
@@ -113,6 +115,7 @@ namespace Julian_Date_Selector
                 }
             catch (Exception ex)
                 {
+                // Provide some user generic feedback if there is a date error
                 MessageBox.Show("Incorrect date entered. Please try again.\n\n\n" + ex.Message, "Date Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lblJulianDateOutput.Text = string.Empty;
                 }
@@ -363,6 +366,72 @@ namespace Julian_Date_Selector
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
             {
             Application.Exit();
+            }
+
+        private void btnFind_Click(object sender, EventArgs e)
+            {
+            DateTime dvSearchDate;
+            if (mtbDate.TextLength < 10)
+                toolStripStatusLabel1.Text = "Date not found. Please check the format and try again.";
+            try
+                {
+                if (DateTime.TryParse(mtbDate.Text, out dvSearchDate))
+                    {
+                    calMonth.SetDate(dvSearchDate);
+                    calMonth.Refresh();
+                    calMonth.Select();
+                    //calMonth.Focus();
+                    toolStripStatusLabel1.Text = "Date found and set in the calendar.";
+                    }
+                else
+                    {
+                    toolStripStatusLabel1.Text = "Date not found. Please check the format and try again.";
+                    }
+                }
+            catch
+                {
+                toolStripStatusLabel1.Text = "Date not found. Please check the format and try again.";
+                }
+            }
+
+        private void mnuHelpWebsite_Click(object sender, EventArgs e)
+            {
+            try
+                {
+                Process.Start("https://www.flippintechnologies.com/calendardatetojuliandateselector");
+                }
+            catch (Exception)
+                {
+                MessageBox.Show("An unanticipated error has occurred.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        private void dtpDate_ValueChanged_1(object sender, EventArgs e)
+            {
+            try
+                {
+                dtpDate.Value = DateTime.Parse(dtpDate.Text);
+                calMonth.SetDate(dtpDate.Value);
+                SetJulianDate();
+                }
+            catch (Exception ex)
+                {
+                // Provide some user generic feedback if there is a date error
+                MessageBox.Show("Incorrect date entered. Please try again.\n\n\n" + ex.Message, "Date Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblJulianDateOutput.Text = string.Empty;
+                }
+            try
+                {
+                //
+                calMonth.SetDate(dtpDate.Value);
+                SetJulianDate();
+                }
+            catch (Exception ex)
+                {
+                // Provide some user generic feedback if there is a date error
+                MessageBox.Show("Incorrect date entered. Please try again.\n\n\n" + ex.Message, "Date Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lblJulianDateOutput.Text = string.Empty;
+                }
             }
         }
     }
