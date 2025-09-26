@@ -49,7 +49,6 @@ namespace Julian_Date_Selector
         private void frmMain_Load(object sender, EventArgs e)
             {
             MenuUncheckItems();
-            RegistryGetJulianFormat();
             try
                 {
                 RegistryGetJulianFormat();
@@ -455,45 +454,6 @@ namespace Julian_Date_Selector
                 mnuYY_DDD.Checked = false;
                 mnuYYYYDDD.Checked = false;
                 mnuYYYY_DDD.Checked = false;
-                }
-            catch (Exception)
-                {
-                MessageBox.Show("An unanticipated error has occured.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-        /// <summary>
-        /// Clears/unchecks the current selections and then checks
-        /// to see the new selection and update the menu
-        /// </summary>
-        private void MenuCheckItems()
-            {
-            try
-                {
-                MenuUncheckItems(); // Unchecks the menu items
-
-                switch (selectedFormat)
-                    {
-                    case JulianDateFormat.DDD:
-                        mnuDDD.Checked = true;
-                        break;
-
-                    case JulianDateFormat.YYDDD:
-                        mnuYYDDD.Checked = true;
-                        break;
-
-                    case JulianDateFormat.YY_DDD:
-                        mnuYY_DDD.Checked = true;
-                        break;
-
-                    case JulianDateFormat.YYYYDDD:
-                        mnuYYYYDDD.Checked = true;
-                        break;
-
-                    case JulianDateFormat.YYYY_DDD:
-                        mnuYYYY_DDD.Checked = true;
-                        break;
-                    }
                 }
             catch (Exception)
                 {
