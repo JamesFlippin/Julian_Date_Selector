@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar Date to Julian Date Selector - Help</title>
+    <style>
+        body {
+            font-family: Segoe UI, Arial, sans-serif;
+            background: #fff;
+            color: #222;
+            margin: 2em;
+        }
+
+        h1, h2, h3 {
+            color: #003366;
+        }
+
+        h1 {
+            border-bottom: 2px solid #003366;
+            padding-bottom: 0.2em;
+        }
+
+        .section {
+            margin-bottom: 2em;
+        }
+
+        ul, ol {
+            margin-left: 2em;
+        }
+
+        .tip {
+            background: #e7f3fe;
+            border-left: 4px solid #2196F3;
+            padding: 0.5em 1em;
+            margin: 1em 0;
+        }
+
+        .statusbar {
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .footer {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 2em;
+            border-top: 1px solid #ccc;
+            padding-top: 1em;
+        }
+
+        a {
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calendar Date to Julian Date Selector<br><small>Help &amp; User Guide</small></h1>
+
+    <div class="section">
+        <h2>Introduction</h2>
+        <p>
+            The <b>Calendar Date to Julian Date Selector</b> is a Windows application that helps you:
+        </p>
+        <ul>
+            <li>Convert any calendar date to a Julian date in multiple formats.</li>
+            <li>Convert a Julian date (in several formats) back to a standard calendar date.</li>
+            <li>Copy results to the clipboard.</li>
+            <li>Use dark mode for comfortable viewing.</li>
+            <li>Access help, about, and exit options.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Main Window Overview</h2>
+        <ul>
+            <li><b>Month Calendar</b> for picking dates.</li>
+            <li><b>Date Picker</b> (drop-down calendar).</li>
+            <li><b>Julian Date Output</b> area.</li>
+            <li><b>Format Selection</b> menu.</li>
+            <li><b>Julian to Calendar Converter</b> section.</li>
+            <li><b>Status Bar</b> at the bottom for feedback.</li>
+            <li>Menu options for Dark Mode, Help, About, and Exit.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>1. Converting Calendar Date to Julian Date</h2>
+        <h3>A. Selecting a Date</h3>
+        <ul>
+            <li><b>Using the Month Calendar:</b> Click any date on the calendar to select it. The selected date will be highlighted.</li>
+            <li><b>Using the Date Picker:</b> Use the drop-down or arrow keys to select a date. The calendar and date picker are synchronized—changing one updates the other.</li>
+        </ul>
+        <h3>B. Viewing the Julian Date</h3>
+        <ul>
+            <li>The Julian date for the selected calendar date is shown in the <b>Julian Date Output</b> box.</li>
+            <li>The format of the Julian date depends on your selection (see below).</li>
+        </ul>
+        <h3>C. Changing the Julian Date Format</h3>
+        <ul>
+            <li>Go to the <b>Set Format</b> menu at the top.</li>
+            <li>
+                Choose from:
+                <ul>
+                    <li><b>DDD</b>: Day of year (e.g., <code>123</code>)</li>
+                    <li><b>YYDDD</b>: Last two digits of year + day of year (e.g., <code>24123</code>)</li>
+                    <li><b>YY DDD</b>: Last two digits of year, space, day of year (e.g., <code>24 123</code>)</li>
+                    <li><b>YYYYDDD</b>: Full year + day of year (e.g., <code>2024123</code>)</li>
+                    <li><b>YYYY DDD</b>: Full year, space, day of year (e.g., <code>2024 123</code>)</li>
+                </ul>
+            </li>
+            <li>The selected format is displayed next to "Currently Selected Format".</li>
+        </ul>
+        <h3>D. Copying the Julian Date</h3>
+        <ul>
+            <li>Click the <b>Copy to the Clipboard</b> button to copy the Julian date.</li>
+            <li>If <b>Notify on Copy</b> is checked, a message box will confirm the copy.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2. Converting Julian Date to Calendar Date</h2>
+        <h3>A. Entering a Julian Date</h3>
+        <ul>
+            <li>
+                In the <b>Convert Julian to Calendar Date</b> section, enter a Julian date in any of these formats:
+                <ul>
+                    <li><code>DDD</code> (e.g., <code>123</code> for the 123rd day of the current year)</li>
+                    <li><code>YYDDD</code> (e.g., <code>24123</code> for the 123rd day of 2024)</li>
+                    <li><code>YY DDD</code> (e.g., <code>24 123</code>)</li>
+                    <li><code>YYYYDDD</code> (e.g., <code>2024123</code>)</li>
+                    <li><code>YYYY DDD</code> (e.g., <code>2024 123</code>)</li>
+                    <li>You can use spaces, dashes, or slashes as separators (e.g., <code>24-123</code>, <code>2024/123</code>).</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>B. Converting</h3>
+        <ul>
+            <li>Click the <b>Convert Julian to Calendar date-&gt;</b> button.</li>
+            <li>The corresponding calendar date will appear in the output box.</li>
+            <li>If the input is invalid, you will see "Invalid Julian date".</li>
+        </ul>
+        <h3>C. Clearing Input and Output</h3>
+        <ul>
+            <li>Click the <b>X</b> button to clear both the Julian input and the calendar output fields.</li>
+        </ul>
+        <h3>D. Copying the Calendar Date</h3>
+        <ul>
+            <li>Double-click the calendar date output to copy it to the clipboard.</li>
+            <li>The status bar will confirm the copy.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Date Search Feature</h2>
+        <ul>
+            <li>
+                In the <b>Date Search</b> group:
+                <ul>
+                    <li>Enter a date in the format <code>MM/DD/YYYY</code> in the masked text box, or use the date picker.</li>
+                    <li>Click the <b>Find</b> button.</li>
+                    <li>The calendar will jump to and highlight the date if valid.</li>
+                    <li>The status bar will show if the date was found or not.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Dark Mode</h2>
+        <ul>
+            <li>Enable dark mode from the <b>Dark-Mode</b> menu at the top.</li>
+            <li>All forms and controls will switch to a dark color scheme for easier viewing in low light.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Help, About, and Exit</h2>
+        <ul>
+            <li><b>Help:</b> Use the <b>Help</b> menu to access the help website for more information.</li>
+            <li><b>About:</b> Use the <b>About</b> menu to see program and author information.</li>
+            <li><b>Exit:</b> Use the <b>Exit</b> menu to close the program.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Status Bar</h2>
+        <ul>
+            <li>
+                The status bar at the bottom of the window provides feedback on actions such as:
+                <ul>
+                    <li>Date search results.</li>
+                    <li>Copy operations.</li>
+                    <li>Error messages.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>7. Error Handling</h2>
+        <ul>
+            <li>If you enter an invalid date or Julian date, the program will display an error message.</li>
+            <li>The Julian date conversion checks for leap years and valid day-of-year ranges.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>8. Tips and Best Practices</h2>
+        <ul>
+            <li><b>Formats:</b> Always check the format you are using for Julian dates. The program accepts several common formats.</li>
+            <li><b>Copying:</b> Use the copy features to quickly transfer results to other applications.</li>
+            <li><b>Dark Mode:</b> Toggle dark mode for comfortable viewing, especially at night.</li>
+            <li><b>Feedback:</b> Watch the status bar for helpful messages about your actions.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>9. Support and License</h2>
+        <ul>
+            <li><b>Help Website:</b> <a href="https://www.flippintechnologies.com/calendardatetojuliandateselector" target="_blank">https://www.flippintechnologies.com/calendardatetojuliandateselector</a></li>
+            <li><b>GitHub Repository:</b> <a href="https://github.com/JamesFlippin/Julian_Date_Selector" target="_blank">https://github.com/JamesFlippin/Julian_Date_Selector</a></li>
+            <li><b>License:</b> GNU GENERAL PUBLIC LICENSE Version 3</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        Programmer: James G. Flippin, Jr.<br>
+        &copy; Flippin Technologies
+    </div>
+</body>
+</html>

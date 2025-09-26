@@ -48,6 +48,8 @@ namespace Julian_Date_Selector
         /// </summary>
         private void frmMain_Load(object sender, EventArgs e)
             {
+            MenuUncheckItems();
+            RegistryGetJulianFormat();
             try
                 {
                 RegistryGetJulianFormat();
@@ -145,6 +147,7 @@ namespace Julian_Date_Selector
         /// <summary>
         /// Handles the YY DDD format menu click event.
         /// </summary>
+        ///
         private void YY_DDD_Click(object sender, EventArgs e) => SetJulianFormat(JulianDateFormat.YY_DDD);
 
         /// <summary>
@@ -208,6 +211,7 @@ namespace Julian_Date_Selector
         /// </summary>
         private void SetJulianDate()
             {
+            MenuUncheckItems();
             try
                 {
                 strYear = dtpDate.Value.Year.ToString();
@@ -217,22 +221,27 @@ namespace Julian_Date_Selector
                     {
                     case JulianDateFormat.DDD:
                         lblJulianDateOutput.Text = strDay;
+                        mnuDDD.Checked = true;
                         break;
 
                     case JulianDateFormat.YYDDD:
                         lblJulianDateOutput.Text = strYear.Substring(2, 2) + strDay;
+                        mnuYYDDD.Checked = true;
                         break;
 
                     case JulianDateFormat.YY_DDD:
                         lblJulianDateOutput.Text = strYear.Substring(2, 2) + " " + strDay;
+                        mnuYY_DDD.Checked = true;
                         break;
 
                     case JulianDateFormat.YYYYDDD:
                         lblJulianDateOutput.Text = strYear + strDay;
+                        mnuYYYYDDD.Checked = true;
                         break;
 
                     case JulianDateFormat.YYYY_DDD:
                         lblJulianDateOutput.Text = strYear + " " + strDay;
+                        mnuYYYY_DDD.Checked = true;
                         break;
                     }
                 }
@@ -431,6 +440,64 @@ namespace Julian_Date_Selector
                 // Provide some user generic feedback if there is a date error
                 MessageBox.Show("Incorrect date entered. Please try again.\n\n\n" + ex.Message, "Date Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lblJulianDateOutput.Text = string.Empty;
+                }
+            }
+
+        /// <summary>
+        /// Unchecks the menu items.
+        /// </summary>
+        private void MenuUncheckItems()
+            {
+            try
+                {
+                mnuDDD.Checked = false;
+                mnuYYDDD.Checked = false;
+                mnuYY_DDD.Checked = false;
+                mnuYYYYDDD.Checked = false;
+                mnuYYYY_DDD.Checked = false;
+                }
+            catch (Exception)
+                {
+                MessageBox.Show("An unanticipated error has occured.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+        /// <summary>
+        /// Clears/unchecks the current selections and then checks
+        /// to see the new selection and update the menu
+        /// </summary>
+        private void MenuCheckItems()
+            {
+            try
+                {
+                MenuUncheckItems(); // Unchecks the menu items
+
+                switch (selectedFormat)
+                    {
+                    case JulianDateFormat.DDD:
+                        mnuDDD.Checked = true;
+                        break;
+
+                    case JulianDateFormat.YYDDD:
+                        mnuYYDDD.Checked = true;
+                        break;
+
+                    case JulianDateFormat.YY_DDD:
+                        mnuYY_DDD.Checked = true;
+                        break;
+
+                    case JulianDateFormat.YYYYDDD:
+                        mnuYYYYDDD.Checked = true;
+                        break;
+
+                    case JulianDateFormat.YYYY_DDD:
+                        mnuYYYY_DDD.Checked = true;
+                        break;
+                    }
+                }
+            catch (Exception)
+                {
+                MessageBox.Show("An unanticipated error has occured.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
