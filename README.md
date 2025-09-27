@@ -13,7 +13,10 @@ A tool for using a calendar date to find out associated the Julian date. Then al
 | `Initial` | `7/4/2022` | Maintenace update |
 | `Update` | `7/3/2023` | Update with 'Find' fix and ToolTips |
 | `Update` | `7/7/2023` | Updates to the `About` screen adding GitHub Information |
-
+| `Update` | `2024-2025` | Minor Updates |
+| `Update` | `9/26/2025` | Added Julian Date to Calendar Date |
+| `Update` | `9/26/2025` | Added End User Guide using F1 Key or Help Menu |
+| `Update` | `9/26/2025` | Other functional cleanup, including better documentation |
 
 ## Help Website
 

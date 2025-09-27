@@ -3,15 +3,15 @@ using System.Reflection;
 using System.Windows.Forms;
 
 namespace Julian_Date_Selector
-{
-    internal partial class frmAbout : Form
     {
+    internal partial class frmAbout : Form
+        {
         /// <summary>
         /// Initializes a new instance of the about form.
         /// I will replace it later with something more stylized.
         /// </summary>
         public frmAbout()
-        {
+            {
             InitializeComponent();
             this.Text = "About - " + AssemblyProduct;
             this.lblProduct.Text = this.lblProduct.Text + AssemblyProduct;
@@ -23,139 +23,139 @@ namespace Julian_Date_Selector
             this.tbxDescription.AppendText("Image: Gastown Steam Clock, Vancouver B.C., Canada" + Environment.NewLine);
             this.tbxDescription.AppendText("Image Copyright: James Flippin 2023" + Environment.NewLine + Environment.NewLine);
             this.tbxDescription.AppendText("Icons courtesy of: https://www.iconfinder.com©");
-        }
+            }
 
         #region Assembly Attribute Accessors
 
         public string AssemblyTitle
-        {
-            get
             {
+            get
+                {
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
                 if (attributes.Length > 0)
-                {
+                    {
                     AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
                     if (titleAttribute.Title != "")
-                    {
+                        {
                         return titleAttribute.Title;
+                        }
                     }
-                }
                 return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
+                }
             }
-        }
 
         public string AssemblyVersion
-        {
-            get
             {
+            get
+                {
                 return Assembly.GetExecutingAssembly().GetName().Version.ToString();
+                }
             }
-        }
 
         public string AssemblyDescription
-        {
-            get
             {
+            get
+                {
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
                 if (attributes.Length == 0)
-                {
+                    {
                     return "";
-                }
+                    }
                 return ((AssemblyDescriptionAttribute)attributes[0]).Description;
+                }
             }
-        }
 
         public string AssemblyProduct
-        {
-            get
             {
+            get
+                {
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
                 if (attributes.Length == 0)
-                {
+                    {
                     return "";
-                }
+                    }
                 return ((AssemblyProductAttribute)attributes[0]).Product;
+                }
             }
-        }
 
         public string AssemblyCopyright
-        {
-            get
             {
+            get
+                {
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
                 if (attributes.Length == 0)
-                {
+                    {
                     return "";
-                }
+                    }
                 return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
+                }
             }
-        }
 
         public string AssemblyCompany
-        {
-            get
             {
+            get
+                {
                 object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
                 if (attributes.Length == 0)
-                {
+                    {
                     return "";
-                }
+                    }
                 return ((AssemblyCompanyAttribute)attributes[0]).Company;
+                }
             }
-        }
 
         #endregion Assembly Attribute Accessors
 
         private void okButton_Click(object sender, EventArgs e)
-        {
+            {
             this.Close();
-        }
+            }
 
         private void lnkLicenseSite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+            {
             // Show we visited the license site
             this.lnkLicenseSite.LinkVisited = true;
 
             // Navigate to a URL
 
             try
-            {
+                {
                 System.Diagnostics.Process.Start("https://www.gnu.org/licenses/gpl-3.0.en.html#license-text");
-            }
+                }
             catch
-            {
+                {
                 MessageBox.Show("Error opening license file link.", "Error: License Link", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-        }
 
         private void btnOk_Click(object sender, EventArgs e)
-        {
+            {
             this.Close();
-        }
+            }
 
         private void lnkGitHubProfile_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+            {
             try
-            {
+                {
                 System.Diagnostics.Process.Start("https://github.com/JamesFlippin");
-            }
+                }
             catch
-            {
+                {
                 MessageBox.Show("Error opening GitHub Profile link.", "Error: GitHub Link", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-        }
 
         private void lnkGitHubRepo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+            {
             try
-            {
+                {
                 System.Diagnostics.Process.Start("https://github.com/JamesFlippin/Julian_Date_Selector");
-            }
+                }
             catch
-            {
+                {
                 MessageBox.Show("Error opening GitHub Repository link.", "Error: GitHub Link", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-        }
 
         /// <summary>
         /// Handles the Click event of the btnDisclaimer control.
@@ -164,7 +164,7 @@ namespace Julian_Date_Selector
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
         private void btnDisclaimer_Click(object sender, EventArgs e)
-        {
+            {
             tbxDescription.Clear(); // Clear out the previous text
             tbxDescription.AppendText("Disclaimer: As Is, No Warranties or Guarantees for Julian Date Selector Program" + Environment.NewLine + Environment.NewLine);
             tbxDescription.AppendText("The following disclaimer outlines the terms and conditions for the use of the 'Julian Date Selector' program, including any associated code, documentation, or materials. By accessing, downloading, or utilizing the program, you agree to the following:" + Environment.NewLine + Environment.NewLine);
@@ -177,6 +177,10 @@ namespace Julian_Date_Selector
             tbxDescription.AppendText("By accessing, downloading, or using the 'Julian Date Selector' program, you acknowledge that you have read, understood, and agreed to this disclaimer. If you do not agree with any part of this disclaimer, you should refrain from accessing, downloading, or using the program and its associated code, documentation, or materials." + Environment.NewLine + Environment.NewLine);
             tbxDescription.Focus(); // Set the focus to the textbox with the disclaimer text
             SendKeys.Send("^{HOME}"); //Quick and dirty (old school) method to set the focus back to the top
+            }
+
+        private void frmAbout_Load(object sender, EventArgs e)
+            {
+            }
         }
     }
-}
