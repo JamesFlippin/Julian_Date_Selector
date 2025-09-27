@@ -20,7 +20,7 @@ A tool for using a calendar date to find out associated the Julian date. Then al
 
 ## Help Website
 
-[Click here for the Help Website for this program](https://www.flippintechnologies.com/calendardatetojuliandateselector)
+[Click here for the Help Website for this program](https://[https://github.com/JamesFlippin/Julian_Date_Selector/blob/master/JulianDateProgram.md](https://github.com/JamesFlippin/Julian_Date_Selector/blob/master/JulianDateProgram.md))
 
 
 ## Author
