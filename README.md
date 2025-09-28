@@ -6,6 +6,7 @@ A tool for using a calendar date to find out the associated Julian date or using
 
 ## Program User Guide (Help)
 [(Click here) To view the User Guide/Help File for this program](https://github.com/JamesFlippin/Julian_Date_Selector/blob/master/JulianDateProgram_Other.md)
+
 ## License 
 [GNU GENERAL PUBLIC LICENSE, Version 3](LICENSE)
 
@@ -34,8 +35,6 @@ A tool for using a calendar date to find out the associated Julian date or using
 ## Language
 
 Writen in C#. Free for anyone to use.
-
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](LICENSE)
 
 ## Demo
 
