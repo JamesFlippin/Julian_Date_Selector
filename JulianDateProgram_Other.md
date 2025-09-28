@@ -153,8 +153,6 @@ When you start the program, you will see:
 
 ## 9. Support and License
 
-- **Help Website:**  
-  [https://www.flippintechnologies.com/calendardatetojuliandateselector](https://www.flippintechnologies.com/calendardatetojuliandateselector)
 - **GitHub Repository:**  
   [https://github.com/JamesFlippin/Julian_Date_Selector](https://github.com/JamesFlippin/Julian_Date_Selector)
 - **License:**  
