@@ -4,11 +4,12 @@ A tool for using a calendar date to find out the associated Julian date or using
 ## Microsoft Store Link (to Install)
 [(Click here) To get the program from the Microsoft Store](https://apps.microsoft.com/detail/9NSGP4VDNW0R)
 
-## Program User Guide (Help)
-[(Click here) To view the User Guide/Help File for this program](https://github.com/JamesFlippin/Julian_Date_Selector/blob/master/JulianDateProgram_Other.md)
+## Help Website
+
+[Click here for the Help Website for this program](https://jamesflippin.github.io/Julian_Date_Selector/JulianDate.html)
 
 ## License 
-[GNU GENERAL PUBLIC LICENSE, Version 3](LICENSE)
+[GNU GENERAL PUBLIC LICENSE, Version 3](https://www.gnu.org/licenses/gpl-3.0.en.html#license-text)
 
 ## Acknowledgements
 
@@ -23,10 +24,6 @@ A tool for using a calendar date to find out the associated Julian date or using
 | `Update` | `2024-2025` | Minor Updates |
 | `Update` | `9/26/2025` | Added Julian Date to Calendar Date, Added End User Guide using F1 Key or Help Menu, Other functional cleanup, including better documentation |
 
-## Help Website
-
-[Click here for the Help Website for this program](https://jamesflippin.github.io/Julian_Date_Selector/JulianDate.html)[https://jamesflippin.github.io/Julian_Date_Selector/JulianDate.html]
-
 ## Author
 
 - [@jamesflippin](https://www.github.com/jamesflippin)
@@ -34,7 +31,7 @@ A tool for using a calendar date to find out the associated Julian date or using
 
 ## Language
 
-Writen in C#. Free for anyone to use.
+Writen in the C# language.
 
 ## Demo
 
