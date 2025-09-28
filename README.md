@@ -1,8 +1,14 @@
 # Julian Date Selector
+A tool for using a calendar date to find out the associated Julian date or using a Julian date to find a Calendar date. Then allow the user to copy the Julian date to the clipboard. The format for the Julian date is customizable from a list of formats.
 
-A tool for using a calendar date to find out associated the Julian date. Then allow the user to copy the Julian date to the clipboard. The format for the Julian date is customizable from a list of formats.
+## Microsoft Store Link (to Install)
+[(Click here) To get the program from the Microsoft Store](https://apps.microsoft.com/detail/9NSGP4VDNW0R)
+
+## Program User Guide (Help)
+[(Click here) To view the User Guide/Help File for this program](https://github.com/JamesFlippin/Julian_Date_Selector/blob/master/JulianDateProgram_Other.md)
 ## License 
 [GNU GENERAL PUBLIC LICENSE, Version 3](LICENSE)
+
 ## Acknowledgements
 
 #### Updates
@@ -42,7 +48,7 @@ Writen in C#. Free for anyone to use.
 
 ## Deployment/Availability (Where can I get it) 
 
-The program is available for installation/download in the **Microsoft Store&copy;** ![Microsoft Store image](images/Microsoft_Store.svg)
+The program is available for installation/download in the [**Microsoft Store&copy;**](https://apps.microsoft.com/detail/9NSGP4VDNW0R) ![Microsoft Store image](images/Microsoft_Store.svg)
 
 (Search for: **'Julian Date Selector'** under apps)
 <hr>
