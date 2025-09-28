@@ -156,8 +156,7 @@ When you start the program, you will see:
 - **GitHub Repository:**  
   [https://github.com/JamesFlippin/Julian_Date_Selector](https://github.com/JamesFlippin/Julian_Date_Selector)
 - **License:**  
-  [GNU GENERAL PUBLIC LICENSE, Version 3](LICENSE)
-  
+  [GNU GENERAL PUBLIC LICENSE, Version 3 ![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](LICENSE)
 
 ---
 
