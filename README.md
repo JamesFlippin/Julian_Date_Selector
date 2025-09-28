@@ -20,9 +20,7 @@ A tool for using a calendar date to find out the associated Julian date or using
 | `Update` | `7/3/2023` | Update with 'Find' fix and ToolTips |
 | `Update` | `7/7/2023` | Updates to the `About` screen adding GitHub Information |
 | `Update` | `2024-2025` | Minor Updates |
-| `Update` | `9/26/2025` | Added Julian Date to Calendar Date |
-| `Update` | `9/26/2025` | Added End User Guide using F1 Key or Help Menu |
-| `Update` | `9/26/2025` | Other functional cleanup, including better documentation |
+| `Update` | `9/26/2025` | Added Julian Date to Calendar Date, Added End User Guide using F1 Key or Help Menu, Other functional cleanup, including better documentation |
 
 ## Help Website
 
@@ -56,13 +54,11 @@ The program is available for installation/download in the [**Microsoft Store&cop
 ## 🚀 About Me
 # Hi, I'm James 👋
 
-I'm a full stack developer...
+I'm an independant Software Developer amongst my many other Information Technology roles. 
 
 ## Other Common Github Profile Sections
 👩‍💻 I'm currently working on several projects...
 
-🧠 I'm currently learning SQLite...
-
 👯‍♀️ I'm looking to collaborate on fun and interesting projects...
 
-📫 My email address is james.flippin@live.com...
+📫 My email address is [james.flippin@zohomail.com](mailto://james.flippin@zohomail.com)...
