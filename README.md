@@ -1,6 +1,7 @@
 # Julian Date Selector
 
 A tool for using a calendar date to find out associated the Julian date. Then allow the user to copy the Julian date to the clipboard. The format for the Julian date is customizable from a list of formats.
+
 ## License 
 [GNU GENERAL PUBLIC LICENSE, Version 3](LICENSE)
 ## Acknowledgements
