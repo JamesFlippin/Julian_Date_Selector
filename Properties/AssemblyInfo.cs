@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("James Flippin, Programmer")]
 [assembly: AssemblyProduct("Julian Date Selector")]
-[assembly: AssemblyCopyright("James Flippin, Copyright ©  2025")]
+[assembly: AssemblyCopyright("James Flippin, Copyright ©  2025, GNU GENERAL PUBLIC LICENSE, Version 3")]
 [assembly: AssemblyTrademark("James Flippin")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("3.0.0.0")]
-[assembly: AssemblyFileVersion("3.0.0.0")]
+[assembly: AssemblyVersion("3.0.4.0")]
+[assembly: AssemblyFileVersion("3.0.4.0")]
