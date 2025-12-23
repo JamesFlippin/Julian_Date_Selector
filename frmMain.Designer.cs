@@ -32,8 +32,8 @@
             this.lblCalendarOutput = new System.Windows.Forms.Label();
             this.btnJulianToCalendar = new System.Windows.Forms.Button();
             this.txtJulianInput = new System.Windows.Forms.TextBox();
-            this.lblJulianDate = new System.Windows.Forms.Label();
             this.lblJulianDateOutput = new System.Windows.Forms.Label();
+            this.lblJulianDate = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuSetFormat = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDDD = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,6 +43,7 @@
             this.mnuYYYY_DDD = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDarkMode = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuUserGuide = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHelpWebsite = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.grpConvertJulianToCalendarDate = new System.Windows.Forms.GroupBox();
-            this.mnuUserGuide = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuHelpVideo = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.grpLookup.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -63,7 +65,7 @@
             // calMonth
             // 
             this.calMonth.CalendarDimensions = new System.Drawing.Size(3, 1);
-            this.calMonth.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calMonth.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calMonth.Location = new System.Drawing.Point(10, 36);
             this.calMonth.Margin = new System.Windows.Forms.Padding(15, 13, 15, 13);
             this.calMonth.MaxSelectionCount = 1;
@@ -153,7 +155,7 @@
             // 
             // btnClearJtoC
             // 
-            this.btnClearJtoC.Location = new System.Drawing.Point(636, 35);
+            this.btnClearJtoC.Location = new System.Drawing.Point(636, 51);
             this.btnClearJtoC.Name = "btnClearJtoC";
             this.btnClearJtoC.Size = new System.Drawing.Size(28, 26);
             this.btnClearJtoC.TabIndex = 15;
@@ -164,7 +166,7 @@
             // lblCalendarOutput
             // 
             this.lblCalendarOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblCalendarOutput.Location = new System.Drawing.Point(414, 35);
+            this.lblCalendarOutput.Location = new System.Drawing.Point(416, 51);
             this.lblCalendarOutput.Name = "lblCalendarOutput";
             this.lblCalendarOutput.Size = new System.Drawing.Size(215, 26);
             this.lblCalendarOutput.TabIndex = 14;
@@ -173,9 +175,9 @@
             // 
             // btnJulianToCalendar
             // 
-            this.btnJulianToCalendar.Location = new System.Drawing.Point(108, 35);
+            this.btnJulianToCalendar.Location = new System.Drawing.Point(108, 28);
             this.btnJulianToCalendar.Name = "btnJulianToCalendar";
-            this.btnJulianToCalendar.Size = new System.Drawing.Size(306, 26);
+            this.btnJulianToCalendar.Size = new System.Drawing.Size(306, 49);
             this.btnJulianToCalendar.TabIndex = 13;
             this.btnJulianToCalendar.Text = "Click here to Convert &Julian to Calendar date->";
             this.ttTips.SetToolTip(this.btnJulianToCalendar, "Converts a Julian Date to a Calendar date");
@@ -184,23 +186,11 @@
             // 
             // txtJulianInput
             // 
-            this.txtJulianInput.Location = new System.Drawing.Point(6, 35);
+            this.txtJulianInput.Location = new System.Drawing.Point(6, 51);
             this.txtJulianInput.Name = "txtJulianInput";
             this.txtJulianInput.Size = new System.Drawing.Size(100, 26);
             this.txtJulianInput.TabIndex = 12;
             this.ttTips.SetToolTip(this.txtJulianInput, "Enter a Julian Date to convert");
-            // 
-            // lblJulianDate
-            // 
-            this.lblJulianDate.AutoSize = true;
-            this.lblJulianDate.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJulianDate.Location = new System.Drawing.Point(176, 393);
-            this.lblJulianDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblJulianDate.Name = "lblJulianDate";
-            this.lblJulianDate.Size = new System.Drawing.Size(148, 29);
-            this.lblJulianDate.TabIndex = 5;
-            this.lblJulianDate.Text = "Julian Date:";
-            this.lblJulianDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblJulianDateOutput
             // 
@@ -213,6 +203,18 @@
             this.lblJulianDateOutput.TabIndex = 6;
             this.lblJulianDateOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ttTips.SetToolTip(this.lblJulianDateOutput, "The currently selected Date in Julian Date Format");
+            // 
+            // lblJulianDate
+            // 
+            this.lblJulianDate.AutoSize = true;
+            this.lblJulianDate.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJulianDate.Location = new System.Drawing.Point(176, 393);
+            this.lblJulianDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblJulianDate.Name = "lblJulianDate";
+            this.lblJulianDate.Size = new System.Drawing.Size(148, 29);
+            this.lblJulianDate.TabIndex = 5;
+            this.lblJulianDate.Text = "Julian Date:";
+            this.lblJulianDate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // menuStrip1
             // 
@@ -246,35 +248,35 @@
             this.mnuDDD.Checked = true;
             this.mnuDDD.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mnuDDD.Name = "mnuDDD";
-            this.mnuDDD.Size = new System.Drawing.Size(180, 24);
+            this.mnuDDD.Size = new System.Drawing.Size(158, 24);
             this.mnuDDD.Text = "DDD";
             this.mnuDDD.Click += new System.EventHandler(this.mnuDDD_Click);
             // 
             // mnuYYDDD
             // 
             this.mnuYYDDD.Name = "mnuYYDDD";
-            this.mnuYYDDD.Size = new System.Drawing.Size(180, 24);
+            this.mnuYYDDD.Size = new System.Drawing.Size(158, 24);
             this.mnuYYDDD.Text = "YYDDD";
             this.mnuYYDDD.Click += new System.EventHandler(this.mnuYYDDD_Click);
             // 
             // mnuYY_DDD
             // 
             this.mnuYY_DDD.Name = "mnuYY_DDD";
-            this.mnuYY_DDD.Size = new System.Drawing.Size(180, 24);
+            this.mnuYY_DDD.Size = new System.Drawing.Size(158, 24);
             this.mnuYY_DDD.Text = "YY DDD";
             this.mnuYY_DDD.Click += new System.EventHandler(this.YY_DDD_Click);
             // 
             // mnuYYYYDDD
             // 
             this.mnuYYYYDDD.Name = "mnuYYYYDDD";
-            this.mnuYYYYDDD.Size = new System.Drawing.Size(180, 24);
+            this.mnuYYYYDDD.Size = new System.Drawing.Size(158, 24);
             this.mnuYYYYDDD.Text = "YYYYDDD";
             this.mnuYYYYDDD.Click += new System.EventHandler(this.mnuYYYYDDD_Click);
             // 
             // mnuYYYY_DDD
             // 
             this.mnuYYYY_DDD.Name = "mnuYYYY_DDD";
-            this.mnuYYYY_DDD.Size = new System.Drawing.Size(180, 24);
+            this.mnuYYYY_DDD.Size = new System.Drawing.Size(158, 24);
             this.mnuYYYY_DDD.Text = "YYYY DDD";
             this.mnuYYYY_DDD.Click += new System.EventHandler(this.mnuYYYY_DDD_Click);
             // 
@@ -288,9 +290,12 @@
             // 
             // mnuHelp
             // 
+            this.mnuHelp.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.mnuHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuUserGuide,
             this.mnuHelpWebsite,
+            this.mnuSep2,
+            this.mnuHelpVideo,
             this.toolStripSeparator1,
             this.mnuAbout});
             this.mnuHelp.Name = "mnuHelp";
@@ -298,22 +303,30 @@
             this.mnuHelp.Text = "&Help";
             this.mnuHelp.ToolTipText = "Click here to for Help";
             // 
+            // mnuUserGuide
+            // 
+            this.mnuUserGuide.Name = "mnuUserGuide";
+            this.mnuUserGuide.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.mnuUserGuide.Size = new System.Drawing.Size(269, 24);
+            this.mnuUserGuide.Text = "&User Guide";
+            this.mnuUserGuide.Click += new System.EventHandler(this.mnuUserGuide_Click);
+            // 
             // mnuHelpWebsite
             // 
             this.mnuHelpWebsite.Name = "mnuHelpWebsite";
-            this.mnuHelpWebsite.Size = new System.Drawing.Size(191, 24);
+            this.mnuHelpWebsite.Size = new System.Drawing.Size(269, 24);
             this.mnuHelpWebsite.Text = "Help &Website";
             this.mnuHelpWebsite.Click += new System.EventHandler(this.mnuHelpWebsite_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(188, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(266, 6);
             // 
             // mnuAbout
             // 
             this.mnuAbout.Name = "mnuAbout";
-            this.mnuAbout.Size = new System.Drawing.Size(191, 24);
+            this.mnuAbout.Size = new System.Drawing.Size(269, 24);
             this.mnuAbout.Text = "About";
             this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
             // 
@@ -364,7 +377,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 541);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 557);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(704, 22);
             this.statusStrip1.TabIndex = 10;
@@ -382,20 +395,23 @@
             this.grpConvertJulianToCalendarDate.Controls.Add(this.lblCalendarOutput);
             this.grpConvertJulianToCalendarDate.Controls.Add(this.btnJulianToCalendar);
             this.grpConvertJulianToCalendarDate.Controls.Add(this.txtJulianInput);
-            this.grpConvertJulianToCalendarDate.Location = new System.Drawing.Point(24, 459);
+            this.grpConvertJulianToCalendarDate.Location = new System.Drawing.Point(24, 457);
             this.grpConvertJulianToCalendarDate.Name = "grpConvertJulianToCalendarDate";
-            this.grpConvertJulianToCalendarDate.Size = new System.Drawing.Size(670, 79);
+            this.grpConvertJulianToCalendarDate.Size = new System.Drawing.Size(670, 92);
             this.grpConvertJulianToCalendarDate.TabIndex = 9;
             this.grpConvertJulianToCalendarDate.TabStop = false;
             this.grpConvertJulianToCalendarDate.Text = "Convert Julian to Calendar Date";
             // 
-            // mnuUserGuide
+            // mnuHelpVideo
             // 
-            this.mnuUserGuide.Name = "mnuUserGuide";
-            this.mnuUserGuide.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.mnuUserGuide.Size = new System.Drawing.Size(191, 24);
-            this.mnuUserGuide.Text = "&User Guide";
-            this.mnuUserGuide.Click += new System.EventHandler(this.mnuUserGuide_Click);
+            this.mnuHelpVideo.Name = "mnuHelpVideo";
+            this.mnuHelpVideo.Size = new System.Drawing.Size(269, 24);
+            this.mnuHelpVideo.Text = "Using the Program/Video";
+            // 
+            // mnuSep2
+            // 
+            this.mnuSep2.Name = "mnuSep2";
+            this.mnuSep2.Size = new System.Drawing.Size(266, 6);
             // 
             // frmMain
             // 
@@ -403,7 +419,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(704, 563);
+            this.ClientSize = new System.Drawing.Size(704, 579);
             this.Controls.Add(this.grpConvertJulianToCalendarDate);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.cbxNotifyOnCopy);
@@ -474,5 +490,7 @@
         private System.Windows.Forms.TextBox txtJulianInput;
         private System.Windows.Forms.Button btnClearJtoC;
         private System.Windows.Forms.ToolStripMenuItem mnuUserGuide;
+        private System.Windows.Forms.ToolStripMenuItem mnuHelpVideo;
+        private System.Windows.Forms.ToolStripSeparator mnuSep2;
         }
 }
